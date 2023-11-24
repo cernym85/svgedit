@@ -1020,7 +1020,11 @@ const setSegTypeMethod = (newType) => {
 * @returns {void}
 */
 const setBackgroundMethod = (color, url) => {
-  const bg = getElement('canvasBackground')
+  let bg = getElement('canvasBackground')
+  if (!bg) {
+    bg = getElement('_canvasBackground' + svgCanvas.curConfig._prefix)
+  }
+
   const border = bg.querySelector('rect')
   let bgImg = getElement('background_image')
   let bgPattern = getElement('background_pattern')
