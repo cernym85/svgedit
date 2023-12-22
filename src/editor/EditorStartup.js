@@ -76,7 +76,7 @@ class EditorStartup {
       this.$svgEditor = $qq('.svg_editor')
       // allow to prepare the dom without display
       this.$svgEditor.style.visibility = 'hidden'
-      this.workarea = $id('workarea')
+      this.workarea = $id('_workarea' + this.configObj._prefix)
       // Image props dialog added to DOM
       const newSeImgPropDialog = document.createElement('se-img-prop-dialog')
       newSeImgPropDialog.setAttribute('id', 'se-img-prop')
