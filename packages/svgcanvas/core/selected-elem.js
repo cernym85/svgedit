@@ -1199,6 +1199,9 @@ const updateCanvas = (w, h) => {
   if (!bg) {
     bg = getElement('_canvasBackground' + svgCanvas.curConfig._prefix)
   }
+  if (!bg) {
+    bg = getElement('canvasBackground')
+  }
   const oldX = Number(svgCanvas.getSvgContent().getAttribute('x'))
   const oldY = Number(svgCanvas.getSvgContent().getAttribute('y'))
   const x = (w - svgCanvas.contentW * zoom) / 2

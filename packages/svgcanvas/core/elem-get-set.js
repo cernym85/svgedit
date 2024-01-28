@@ -1024,7 +1024,9 @@ const setBackgroundMethod = (color, url) => {
   if (!bg) {
     bg = getElement('_canvasBackground' + svgCanvas.curConfig._prefix)
   }
-
+  if (!bg) {
+    bg = getElement('canvasBackground')
+  }
   const border = bg.querySelector('rect')
   let bgImg = getElement('background_image')
   let bgPattern = getElement('background_pattern')
