@@ -659,7 +659,7 @@ const mouseUpEvent = (evt) => {
 
         // Remove non-scaling stroke
         const elem = selectedElements[0]
-        if (elem) {
+        if (elem && elem.nodeName !== 'foreignObject') {
           elem.removeAttribute('style')
           walkTree(elem, (el) => {
             el.removeAttribute('style')
